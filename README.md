@@ -1,12 +1,12 @@
 # NumeRe::Packages
-## The official package repository for NumeRe
-This repository lists all officially published packages and plugins, which are available for NumeRe. It was migrated from SourceForge, because forking and creating pull requests makes it easier for the package authors to actually share their creations. NumeRe supports this repository starting with the full release of v1.1.8.
+## The official and central package repository for NumeRe
+This repository lists all officially published packages and plugins, which are available for NumeRe. It was migrated from SourceForge, because forking and creating pull requests makes it easier for the package authors to actually share their creations. NumeRe supports this repository starting with the full release of v1.1.8 (executing `version() > 118.2605` will return `true` if you run this or a higher version).
 
 ## License
-Although the package repository is flagged as Apache-2.0 licensed, each package may have an individual license. Ensure that you read and understand the conditions of said license.
+Although the package repository is flagged as licensed under the terms of Apache-2.0, each package may be shared with a separate and even more restrictive license. Ensure that you read and understand the conditions of said license before installing any packages.
 
 ## Guarantee Disclaimer
-Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an **"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND**, either express or implied, including, without limitation, any warranties or conditions of **TITLE, NON-INFRINGEMENT, MERCHANTABILITY**, or **FITNESS FOR A PARTICULAR PURPOSE**. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.
+Unless required by applicable law or agreed to in writing, NumeRe.org provides the Work (and each Contributor provides its Contributions) on an **"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND**, either express or implied, including, without limitation, any warranties or conditions of **TITLE, NON-INFRINGEMENT, MERCHANTABILITY**, or **FITNESS FOR A PARTICULAR PURPOSE**. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.
 
 ## Contributing
 Please read the [Contribution Guideline](https://github.com/numere-org/NumeRe-Packages/blob/main/CONTRIBUTING.md).
@@ -14,8 +14,13 @@ Please read the [Contribution Guideline](https://github.com/numere-org/NumeRe-Pa
 ## Questions?
 Please get in touch or open an issue. We will extend this readme during the resolution of your inquiry.
 
+# Advanced Topics
+This section is about advanced topics, which are not relevant for every user.
+
 ## Custom or private repositories
-NumeRe supports (with the full release of v1.1.8) the usage of multiple package repositories, which can exist side-by-side. To be usable, the package repositories need to provide a REST API similar to the one here on GitHub. We can ensure that private and public repositories work on GitHub and Gitlab.
+Especially in an enterprise context, where the intellectual property topic may be challening, not all code might be allowed to leave the company's IT infrastructure. Contributing packages with such code snippets won't be allowed. Therefore, it is necessary to have a separate package repository especially for and governed the company.
+
+NumeRe supports (with the full release of v1.1.8) the usage of multiple package repositories, which can co-exist side-by-side. To be usable, the package repositories need to provide a REST API similar to the one here on GitHub. We can ensure that private and public repositories work on GitHub and Gitlab.
 
 ### Setting up the repository
 To set up the repository, you need to decide, whether it's public or private. In the latter case, you need some kind of authentication. NumeRe supports (right now) only the HTTP header based authentication using access tokens, which is used by GitHub and Gitlab as well.

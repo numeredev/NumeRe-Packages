@@ -25,7 +25,7 @@ NumeRe supports (with the full release of v1.1.8) the usage of multiple package 
 ### Setting up the repository
 To set up the repository, you need to decide, whether it's public or private. In the latter case, you need some kind of authentication. NumeRe supports (right now) only the HTTP header based authentication using access tokens, which is used by GitHub and Gitlab as well.
 
-A package repository needs to provide the standard directory structure (it does not need to use git, only the REST API is important): The root folder in the repository needs to be `packages`. This folder shall contain a subfolder per package, which themselves will contain the version folders with the package and the `meta.json`.
+A package repository needs to provide the standard directory structure (it does not need to use git, only the REST API is important): The root folder in the repository needs to be `packages`. This folder shall contain a subfolder per package, which itself will contain the version folders with the package and the `meta.json`.
 ```
 packages/
     pkg_XYZ/
@@ -64,7 +64,7 @@ This section shows the contents of `10_numere_packages.repository`:
     "raw-file": "https://raw.githubusercontent.com/numere-org/NumeRe-Packages/refs/heads/main/{path}"
 }
 ```
-To add a GitHub-hosted repo, just copy the contents of this JSON, change the three URLs (replace `numere-org/Packages` with the correspond URL sections for your repository) and adapt the authentication section, if your repo is private, with `"required": true,` and `"method": "Authorization: Bearer ghp_YOURGITHUBTOKEN"`.
+To add a GitHub-hosted repo, just copy the contents of this JSON, change the three URLs (replace `numere-org/Packages` with the corresponding URL sections for your repository) and adapt the authentication section, if your repo is private, with `"required": true,` and `"method": "Authorization: Bearer ghp_YOURGITHUBTOKEN"`.
 
 #### Gitlab as Host
 If you want to host the repository on Gitlab (or a self-hosted instance), then the following `*.repository` might be a good starting point (this one is a private one):
@@ -89,7 +89,7 @@ If you want to host the repository on Gitlab (or a self-hosted instance), then t
 Note that the `42` in the paths stands for the repository ID not the repository name. You can copy the ID from your repository page. The `per_page=100000` limit is to allow a tree of identical size as on Github. However, it is not guaranteed that this limit will be supported by Gitlab in the future. If you face troubles, give us a hint.
 
 #### Other Hosts
-Other hosts than GitHub or Gitlab may not work, although their API might be similar to GitHub's (Bitbucket seems to be such a candidate). Do not hesitate to ask for assistance in spinning your repository up and make it accessible. This service is free for individuals. Enterprise users may get in touch to clarify licensing, warranty and compensation.
+Other hosts than GitHub or Gitlab may not work, although their API might be similar to GitHub's (Bitbucket seems to be such a candidate). Do not hesitate to ask for assistance in spinning up your repository and make it accessible. This service is free for individuals. Enterprise users may get in touch to clarify licensing, warranty and compensation.
 
 #### Field documentation
 The meaning of the fields in a `*.repository` configuration is as follows:
